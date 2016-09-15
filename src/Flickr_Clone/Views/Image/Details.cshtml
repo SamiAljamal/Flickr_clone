@@ -1,0 +1,23 @@
+﻿@model Flickr_Clone.Models.Image
+
+<img src="@Model.Path" style="max-width: 300px;" />
+<br />
+@foreach(var it in Model.ImageTags)
+{
+    @it.Tag.description
+}
+@using (Html.BeginForm())
+{
+    <label>Add Tag</label>
+    <input type="text" value="Tag" name="tag" />
+    <input type="hidden" value="@Model.Id" name="img" />
+    <button class="btn btn-primary">Submit</button>
+
+}
+@if (ViewBag.ShowDelete)
+{
+    @using(Html.BeginForm("Delete","Image",new { id= Model.Id}))
+    {
+       <button>Delete</button>
+    }
+}

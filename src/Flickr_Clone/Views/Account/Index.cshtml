@@ -1,0 +1,37 @@
+﻿@{ 
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+@model IEnumerable<Flickr_Clone.Models.Image>
+
+<h2>Authentication with Identity</h2>
+<hr />
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Hello @User.Identity.Name!</p>
+    @using (Html.BeginForm("LogOff", "Account"))
+    {
+        <input type="submit" class="btn btn-default" value="Log out" />
+    }
+    <form method="post" asp-action="Index" asp-controller="Home" enctype="multipart/form-data">
+        <input type="file" name="files" multiple />
+        <input type="submit" value="Upload" />
+    </form>
+}
+else
+{
+    <p>@Html.ActionLink("Register", "Register")</p>
+    <p>@Html.ActionLink("Log in", "Login")</p>
+}
+<h2>Images you've posted</h2>
+@if (Model.Any())
+{
+    @foreach (var i in Model)
+    {
+        <a href="/image/Details/@i.Id"><img src="@i.Path" style="max-width: 300px;" /></a>
+
+    }
+
+}

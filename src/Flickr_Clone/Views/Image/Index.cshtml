@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model ICollection<Flickr_Clone.Models.Image>
+
+@foreach (var i in Model)
+{
+    <a href="/image/Details/@i.Id"><img src="@i.Path" style="max-width: 300px;" /></a>
+    
+}
