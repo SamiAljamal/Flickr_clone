@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Flickr_Clone.Models.Tag
+
+<h2>@Model.description</h2>
+<hr />
+@foreach (var imgtg in Model.ImageTags)
+{
+    <a href="/image/Details/@imgtg.Image.Id"><img src="@imgtg.Image.Path" style="max-width: 300px;" /></a>
+
+}

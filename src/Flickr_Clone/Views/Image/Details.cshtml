@@ -4,7 +4,8 @@
 <br />
 @foreach(var it in Model.ImageTags)
 {
-    @it.Tag.description
+    
+   <span class="space" style="margin-right:2px">@Html.ActionLink(it.Tag.description, "Details", "Tag", new { id = it.Tag.TagId })</span>
 }
 @using (Html.BeginForm())
 {

@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Flickr_Clone.Models.Tag>
+
+<ul>
+    @foreach(var tag in Model)
+    {
+        <li>@Html.ActionLink(tag.description, "Details", "Tag", new { id = tag.TagId})</li>
+    }
+</ul>

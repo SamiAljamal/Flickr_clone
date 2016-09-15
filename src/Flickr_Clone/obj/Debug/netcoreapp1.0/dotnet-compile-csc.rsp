@@ -201,6 +201,7 @@
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Startup.cs"
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Controllers\AccountController.cs"
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Controllers\ImageController.cs"
+"C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Controllers\TagController.cs"
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Migrations\20160915155051_Initial.cs"
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Migrations\20160915155051_Initial.Designer.cs"
 "C:\Users\epicodus\Desktop\Flickr_Clone\src\Flickr_Clone\Migrations\20160915165928_ImageTable.cs"
